@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+  <div class="wrapper movie-page">
+    <div class="container direction-column">
+      @@include('_header.html')
+      @@include('_menu.html')
+      @@include('_breadcrumbs.html', {'last-crumb': 'Назва фільму може бути довгою'})
+
+      <!-- MAIN -->
+      <main class="main" id="main">
+        <!-- About movie -->
+        <div class="about-movie">
+          <div class="about-movie__description">
+            <!-- About movie head -->
+            <div class="about-movie__head">
+              <!-- Movie cover -->
+              <div class="about-movie__cover">
+                <picture class="about-movie__picture">
+                  <img src="img/movie-cover/1.jpg" alt="image">
+                </picture>
+                <a href="#" class="about-movie__btn btn btn_bordered js-trailer-btn">
+                  <i>
+                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.833374 1.33331V14.6666L11.6667 7.99998L0.833374 1.33331Z" stroke="white"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </i>
+                  Дивитись трейлер
+                </a>
+              </div>
+              <!-- Movie info -->
+              <div class="about-movie__info">
+                <h1 class="about-movie__title">
+                  Назва фільму може бути довгою
+                </h1>
+                <p class="about-movie__genre">
+                  Бойовик, Трилер, Драма
+                </p>
+                <div class="about-movie__movie-dimension">
+                  @@include('_movie-dimension.html', {
+                  additionalClass: '',
+                  'dimension-2D': '<div class="movie-dimension__item">2D</div>',
+                  'dimension-3D': '<div class="movie-dimension__item">3D</div>'
+                  })
+                  <p>
+                    <b>16+</b>
+                  </p>
+                </div>
+                <p class="rating">
+                  IMDb <span><b>7,8</b></span> /10
+                </p>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Рік
+                  </span>
+                  <b>2020</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Тривалість
+                  </span>
+                  <b>151 хвилина</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Мова
+                  </span>
+                  <b>Українська</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    У прокаті до
+                  </span>
+                  <b>20.11.2020</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Країна
+                  </span>
+                  <b>США, Францiя, Китай, Нiмеччина</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    У головних ролях
+                  </span>
+                  <b>Галь Гадот, Кріс Пайн, Крістен Уіг, Лінда Картер, Педро Паскаль</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Режисер
+                  </span>
+                  <b>Петті Дженкінс</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Сценарист
+                  </span>
+                  <b>Петті Дженкінс</b>
+                </div>
+                <div class="about-movie__info-item">
+                  <span class="about-movie__info-subtitle">
+                    Студія виробництво
+                  </span>
+                  <b>Warner Brothers</b>
+                </div>
+                </divv>
+              </div>
+            </div>
+            <!-- About movie bottom -->
+            <div class="about-movie__bottom js-hidden-text-wrap">
+              <p class="about-movie__like-title">
+                Опис
+              </p>
+              <p class="about-movie__text is-hidden-text js-hidden-text">
+                Фантастичний трилер «Тенет» – новий фільм режисера та сценариста Крістофера Нолана. Зйомки відбувалися в
+                умовах, за яких актори не знали сюжетної лінії стрічки. Відомо, що герої перебуватимуть у реальності, де
+                час тече у зворотному напрямку, проте як і чому це відбувається – пояснень поки що немає. Фільмували у
+                семи країнах світу, серед яких США, Великобританія, Норвегія, Італія, Індія, Данія та Естонія. На
+                декораціях у Таллінні були написи українською мовою, тож можна припустити, що частина подій фільму
+                розгортатиметься в Україні. Для однієї зі сцен було придбано справжній Боїнг-747. За словами Нолана, це
+                було дешевше, ніж будувати модель чи користуватися графікою. Робочий процес було завершено до того, як
+                кіноіндустрія внесла корективи у графіки зйомок через пандемію коронавірусу. Проте дата релізу стрічки
+                вже двічі була перенесена.
+              </p>
+              <button class="about-movie__btn-more js-btn-show-text" type="button">
+                Читати далi
+                <i>
+                  <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M9.67463 0L10.5297 0.855124L5.26487 6.12L0 0.855124L0.855124 0L5.26487 4.40975L9.67463 0Z"
+                      fill="#ffffff" />
+                  </svg>
+                </i>
+              </button>
+            </div>
+          </div>
+          @@include('_hours-sessions.html', {additionalClass: 'about-movie__hours-sessions'})
+        </div>
+        @@include('_slider-5.html', {title: 'Інші фільми у прокаті'})
+      </main>
+
+      @@include('_footer.html')
+    </div>
+  </div>
+
+  @@include('_popup-profile.html')
+
+  @@include('_scripts.html')
+</body>
+
+</html>

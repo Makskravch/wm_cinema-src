@@ -1,0 +1,87 @@
+.btn {
+  @include font(14px, 18px, "Geometria-Regular");
+  display: inline-block;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.btn_primary {
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  box-shadow: 0px 4px 20px $color-shadow;
+  &:hover {
+    border: 1px solid $color-hovered;
+    background-color: $color-hovered;
+  }
+}
+.btn_secondary {
+  border: 1px solid $color-white;
+  background-color: $color-bg-secondary;
+  color: $color-text-secondary;
+  &:hover {
+    background-color: transparent;
+    color: $color-text-primary;
+  }
+}
+.btn_bordered {
+  position: relative;
+  border: 1px solid $color-white;
+  &:hover {
+    background-color: $color-bg-secondary;
+    color: $color-text-secondary;
+    path {
+      stroke: $color-text-secondary;
+    }
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    transform: translateY(-50%);
+  }
+  path {
+    transition: 0.2s;
+  }
+}
+
+.btn-additional {
+  @include font(14px, 18px, "Geometria-Regular");
+  display: inline-block;
+  min-width: 114px;
+  padding: 10px;
+  border: 1px solid $color-white-1;
+  border-radius: 30px;
+  background-color: transparent;
+  text-align: center;
+  color: $color-text-primary;
+  transition: all 0.2s;
+  &:hover {
+    border-color: transparent;
+    background-color: $color-white-1;
+  }
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: -2px;
+}
+.load-more__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  padding: 15px;
+  @include respond-to(mobile) {
+    min-width: auto;
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+}

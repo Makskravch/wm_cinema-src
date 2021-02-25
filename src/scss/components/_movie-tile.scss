@@ -1,0 +1,87 @@
+.movie-tile {
+  width: 100%;
+}
+.movie-tile__preview {
+  position: relative;
+  margin-bottom: 12px;
+  @include respond-to(mobile) {
+    margin-bottom: 10px;
+  }
+  &:hover {
+    .movie-tile__description {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.movie-tile__dimension {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  z-index: 1;
+}
+.movie-tile__picture {
+  position: relative;
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 148%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.movie-tile__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 30px 21px;
+  background-color: $color-bg-hovered;
+  transition: all 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  @include respond-to(mobile) {
+    padding: 15px 10px;
+  }
+}
+.movie-tile__genre {
+  @include respond-to(mobile) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+.movie-tile__age-restrictions {
+  margin: 17px 0 9px;
+  @include respond-to(mobile) {
+    margin: 7px 0;
+  }
+}
+.movie-tile__trailer {
+  margin: 24px 0 10px;
+  @include respond-to(mobile) {
+    margin: 10px 0 7px;
+  }
+}
+.movie-tile__title {
+  @include font(18px, 25px, "Geometria-Bold");
+  display: block;
+  min-height: 50px;
+  transition: all 0.2s;
+  @include respond-to(tablet_plus) {
+    @include font(16px, 20px, "Geometria-Bold");
+    min-height: 40px;
+  }
+  &:hover {
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,70 @@
+.promotions-discounts-article {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 27px;
+  @include respond-to(tablet) {
+    flex-direction: column-reverse;
+  }
+  h1 {
+    margin-bottom: 17px;
+  }
+  p {
+    @include font(14px, 23px, "Geometria-Regular");
+    margin-bottom: 20px;
+  }
+  ul {
+    padding: 12px 0 30px 15px;
+  }
+  li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 13px;
+      width: 13px;
+      margin-right: 15px;
+      border-radius: 50%;
+      background-color: $color-primary;
+    }
+  }
+}
+.promotions-discounts-article__description {
+  width: 100%;
+  max-width: 622px;
+  margin: 0 68px 0 0;
+  @include respond-to(tablet) {
+    max-width: none;
+    margin: 40px 0 0 0;
+  }
+}
+.promotions-discounts-article__date {
+  @include font(14px, 22px, "Geometria-Bold");
+  margin-bottom: 18px;
+  color: $color-primary;
+}
+.promotions-discounts-article__photo {
+  width: 100%;
+  max-width: 600px;
+  @include respond-to(tablet) {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  picture {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-bottom: 100%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,44 @@
+.menu {
+  @include background(url("../img/svg/MW_ffffff.svg"), 69%, 0, 61%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $color-primary;
+  transform: translateX(-100%);
+  transition: 0.2s;
+  overflow-y: auto;
+  z-index: 9;
+  @include respond-to(tablet_plus) {
+    background-position: center;
+    background-size: contain;
+  }
+  &.is-active {
+    transform: translateX(0);
+  }
+  & > div {
+    min-height: 100%;
+  }
+  .wrapper {
+    background-color: transparent;
+  }
+}
+.menu__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 178px 0 50px;
+  @include respond-to(tablet_plus) {
+    padding: 110px 0 30px;
+  }
+}
+.menu__language {
+  display: none;
+  @include respond-to(mobile) {
+    display: inline-block;
+    background-color: $color-white-1;
+  }
+}

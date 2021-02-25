@@ -1,0 +1,16 @@
+.social__list {
+  display: flex;
+}
+.social__item {
+  margin: 0 10px;
+}
+.social__link {
+  path {
+    transition: 0.2s;
+  }
+  &:hover {
+    path {
+      stroke: $color-primary;
+    }
+  }
+}

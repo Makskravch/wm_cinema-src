@@ -1,0 +1,60 @@
+.slider-5 {
+  padding: 34px 0 45px;
+  overflow-x: hidden;
+  .slick-list {
+    margin: 0 -16px;
+    @include respond-to(mobile) {
+      padding-right: 30%;
+    }
+  }
+  .slick-slide {
+    margin: 0 16px;
+  }
+  .slick-arrow {
+    top: -42px;
+    height: 44px;
+    width: 44px;
+    border: 1px solid transparent;
+    transition: 0.2s;
+    z-index: 1;
+    @include respond-to(mobile) {
+      top: -35px;
+      height: 40px;
+      width: 40px;
+    }
+    &:hover {
+      border: 1px solid $color-white;
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 22px;
+      width: 12px;
+      margin: 0 auto;
+    }
+  }
+  .slick-prev {
+    right: 64px;
+    left: unset;
+    &::before {
+      @include background(url("../img/svg/arrow-left_ffffff.svg"));
+    }
+  }
+  .slick-next {
+    right: 0;
+    &::before {
+      @include background(url("../img/svg/arrow-right_ffffff.svg"));
+    }
+  }
+}
+.slider-5__title {
+  @include font(28px, 32px, "Geometria-Bold");
+  padding-right: 120px;
+  margin-bottom: 34px;
+  @include respond-to(tablet_plus) {
+    @include font(22px, 26px, "Geometria-Bold");
+  }
+  @include respond-to(mobile) {
+    padding-right: 0;
+  }
+}

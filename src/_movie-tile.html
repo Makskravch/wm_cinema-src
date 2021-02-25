@@ -1,0 +1,36 @@
+<div class="movie-tile">
+  <div class="movie-tile__preview">
+    @@include('_movie-dimension.html', {
+    'additionalClass': 'movie-tile__dimension',
+    'dimension-2D': '<div class="movie-dimension__item">2D</div>',
+    'dimension-3D': '<div class="movie-dimension__item">3D</div>'
+    })
+    <picture class="movie-tile__picture">
+      <img src="img/movie-tile/1.jpg" alt="image">
+    </picture>
+    <div class="movie-tile__description">
+      <p class="movie-tile__genre">
+        Бойовик, Трилер, Драма
+      </p>
+      <p class="movie-tile__age-restrictions">
+        16+
+      </p>
+      <p class="rating">
+        IMDb <b>7,8</b> /10
+      </p>
+      <a href="#" class="movie-tile__trailer btn btn_bordered">
+        <i>
+          <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.833374 1.33331V14.6666L11.6667 7.99998L0.833374 1.33331Z" stroke="white" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </i>
+        Трейлер
+      </a>
+      <a href="#" class="movie-tile__session btn btn_primary">Обрати сеанс</a>
+    </div>
+  </div>
+  <a href="#" class="movie-tile__title">
+    Назва фільму може бути довгою
+  </a>
+</div>

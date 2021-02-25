@@ -1,0 +1,17 @@
+.movie-dimension__item {
+  @include font(14px, 20px, "Geometria-Bold");
+  display: inline-block;
+  min-width: 47px;
+  padding: 2px;
+  background-color: $color-bg-secondary;
+  border-radius: 30px;
+  margin-right: 5px;
+  color: $color-text-secondary;
+  text-align: center;
+  @include respond-to(mobile) {
+    width: 40px;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

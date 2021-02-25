@@ -1,0 +1,41 @@
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions__profile,
+.actions__cart {
+  @include font(12px, 12px, "Geometria-Regular");
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  min-width: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.actions__session-schedule {
+  min-width: 188px;
+}
+.actions__profile {
+  margin: 0 18px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.actions__cart {
+  &::before {
+    content: attr(data-tickets);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5px 4.5px;
+    transform: translate(40%, -20%);
+    border-radius: 50%;
+    background: $color-primary;
+    color: $color-text-primary;
+  }
+}

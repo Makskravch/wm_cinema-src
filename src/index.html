@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+  <div class="wrapper home-page">
+    <div class="container direction-column">
+      @@include('_header.html')
+      @@include('_menu.html')
+
+      <!-- MAIN -->
+      <main class="main" id="main">
+        @@include('_banner.html')
+        @@include('_movie-list.html', {title: 'Фільми у прокаті'})
+        @@include('_coming-soon.html', {title: 'Скоро у прокаті'})
+        @@include('_slider-4.html', {title: 'Акції та новини'})
+      </main>
+
+      @@include('_footer.html')
+    </div>
+  </div>
+
+  @@include('_popup-profile.html')
+
+  @@include('_scripts.html')
+</body>
+
+</html>

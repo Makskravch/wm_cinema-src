@@ -1,0 +1,11 @@
+.wrapper {
+  @include background(url("../img/svg/MW_ffffff.svg"), 69%, 0, 61%);
+  display: flex;
+  min-height: 100vh;
+  background-color: $color-bg-primary;
+  background-attachment: fixed;
+  @include respond-to(tablet_plus) {
+    background-position: center top;
+    background-size: contain;
+  }
+}

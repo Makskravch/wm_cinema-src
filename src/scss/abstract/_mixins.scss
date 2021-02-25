@@ -1,0 +1,62 @@
+@mixin font($font_size, $line_height, $font_family: sans-serif) {
+  font: #{$font_size/$base_font_size}rem/#{$line_height/$base_font_size}rem $font_family;
+}
+
+@mixin background($url, $left: left, $top: top, $size: cover, $color: transparent, $repeat: no-repeat) {
+  background-image: $url;
+  background-position: $left $top;
+  background-size: $size;
+  background-color: $color;
+  background-repeat: $repeat;
+}
+
+@mixin respond-to($media) {
+  // 374 -
+  @if $media == mobile_small {
+    @media only screen and (max-width: $mobile-small - 1) {
+      @content;
+    }
+  }
+  // 479 -
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile-landscape - 1) {
+      @content;
+    }
+  }
+  // 479 - landscape
+  @if $media == tablet_landscape {
+    @media only screen and (max-width: $tablet-portrait) and (orientation: landscape) {
+      @content;
+    }
+  }
+  // 767 -
+  @if $media == tablet {
+    @media only screen and (max-width: $tablet-portrait - 1) {
+      @content;
+    }
+  }
+  // 991 -
+  @else if $media == tablet_plus {
+    @media only screen and (max-width: $tablet-portrait-plus - 1) {
+      @content;
+    }
+  }
+  // 1279 -
+  @else if $media == desktop_minus {
+    @media only screen and (max-width: $tablet-landscape - 1) {
+      @content;
+    }
+  }
+  // 1439 -
+  @else if $media == desktop {
+    @media only screen and (max-width: $desktop - 1) {
+      @content;
+    }
+  }
+  // 1599 -
+  @else if $media == desktop_plus {
+    @media only screen and (max-width: $desktop-extra - 1) {
+      @content;
+    }
+  }
+}

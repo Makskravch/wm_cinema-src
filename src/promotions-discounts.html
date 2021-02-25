@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+  <div class="wrapper promotions-discounts-page">
+    <div class="container direction-column">
+      @@include('_header.html')
+      @@include('_menu.html')
+      @@include('_breadcrumbs.html', {'last-crumb': 'Акції та знижки'})
+
+      <!-- MAIN -->
+      <main class="main" id="main">
+        <h1 class="promotions-discounts__title">
+          Акції та знижки
+        </h1>
+        <div class="grid-4">
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+          @@include('_promotions-news-tile.html')
+        </div>
+        @@include('_load-more.html', {
+        'text': 'Показати ще',
+        'icon': '<i><svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.25352 10.194V5.91H0.948516V4.377H5.25352V0.0929993H6.74452V4.377H11.0705V5.91H6.74452V10.194H5.25352Z" fill="white"/></svg></i>'
+        })
+      </main>
+
+      @@include('_footer.html')
+    </div>
+  </div>
+
+  @@include('_popup-profile.html')
+
+  @@include('_scripts.html')
+</body>
+
+</html>

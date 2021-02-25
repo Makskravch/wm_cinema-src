@@ -1,0 +1,56 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  &.colored-bg {
+    transition: 0.3s;
+    background-color: $color-bg-hovered;
+  }
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 0;
+  @include respond-to(tablet_plus) {
+    padding: 15px 0;
+  }
+  @include respond-to(mobile) {
+    padding: 10px 0;
+  }
+}
+.header__logo {
+  .logo__link {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .logo__icon {
+    display: block;
+  }
+  .logo__name,
+  .logo__slogan {
+    display: none;
+  }
+}
+.header__menu-btn {
+  margin: 0 24px 0 48px;
+  @include respond-to(tablet) {
+    margin: 0 16px 0 17px;
+  }
+  @include respond-to(mobile) {
+    margin: 0 0 0 17px;
+  }
+}
+.header__language + .ui-selectmenu-button {
+  @include respond-to(mobile) {
+    display: none;
+  }
+}
+.header__actions {
+  margin-left: auto;
+}
+.actions__session-schedule {
+  @include respond-to(tablet) {
+    display: none;
+  }
+}

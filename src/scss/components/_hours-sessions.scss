@@ -1,0 +1,54 @@
+.hours-sessions {
+  @include respond-to(tablet_plus) {
+    padding: 10px 0;
+  }
+}
+.hours-sessions__inner {
+  padding: 41px 40px 33px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 90px $color-shadow-1;
+  background-color: $color-bg-secondary;
+  color: $color-text-secondary;
+  @include respond-to(mobile) {
+    padding: 15px;
+    border-radius: 20px;
+  }
+}
+.hours-sessions__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 13px;
+}
+.hours-sessions__title {
+  @include font(24px, 42px, "Geometria-Bold");
+}
+
+// Halls
+.halls__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  margin: 0 -3.5px;
+}
+.halls__title {
+  @include font(16px, 30px, "Geometria-Regular");
+  width: 100%;
+  padding: 0 3.5px;
+  margin-bottom: 8px;
+}
+.halls__hour {
+  @include font(14px, 18px, "Geometria-Bold");
+  padding: 6px 10px;
+  min-width: 64px;
+  margin: 0 3.5px 5px;
+  border-radius: 10px;
+  background-color: $color-bg-gray;
+  color: $color-text-secondary;
+  text-align: center;
+  transition: 0.2s;
+  &:hover {
+    background-color: $color-primary;
+    color: $color-text-primary;
+  }
+}

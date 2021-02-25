@@ -1,0 +1,33 @@
+.popup-profile {
+  max-width: 555px;
+  padding: 65px 118px 75px;
+  margin: 0 auto;
+  background-color: $color-bg-primary;
+  @include respond-to(tablet_plus) {
+    padding: 50px 50px 70px;
+  }
+  @include respond-to(mobile) {
+    padding: 30px 20px 40px;
+  }
+}
+.popup-profile__title {
+  @include font(24px, 35px, "Geometria-Regular");
+  margin-bottom: 19px;
+  text-align: center;
+}
+.popup-profile__description {
+  @include font(16px, 26px, "Geometria-Regular");
+  margin-bottom: 30px;
+  text-align: center;
+}
+.popup-profile__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup-profile__link {
+  margin-bottom: 19px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

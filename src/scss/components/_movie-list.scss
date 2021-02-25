@@ -1,0 +1,14 @@
+.movie-list {
+  padding: 60px 0 40px;
+}
+.movie-list__title {
+  margin-bottom: 33px;
+  @include respond-to(mobile) {
+    margin-bottom: 15px;
+  }
+}
+.grid-5 {
+  .movie-tile {
+    margin-bottom: 27px;
+  }
+}

@@ -1,0 +1,24 @@
+.contacts__item {
+  @include font(14px, 17px, "Geometria-Regular");
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 38px;
+  color: $color-primary;
+  @include respond-to(tablet_plus) {
+    text-align: center;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.contacts__link {
+  @include font(18px, 22px, "Geometria-Bold");
+  margin-top: 5px;
+  transition: 0.2s;
+  @include respond-to(tablet_plus) {
+    font-family: "Geometria-Regular";
+  }
+  &:hover {
+    color: $color-primary;
+  }
+}

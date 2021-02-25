@@ -1,0 +1,159 @@
+.about-movie {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 0 78px;
+  @include respond-to(tablet_plus) {
+    flex-direction: column;
+    padding: 15px 0 61px;
+  }
+  @include respond-to(mobile) {
+    padding: 15px 0 35px;
+  }
+}
+.about-movie__description {
+  width: 58.14%;
+  @include respond-to(tablet_plus) {
+    width: 100%;
+  }
+  @include respond-to(tablet_plus) {
+    padding-bottom: 30px;
+  }
+}
+.about-movie__head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 19px;
+  @include respond-to(tablet_plus) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  @include respond-to(mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+.about-movie__cover {
+  width: 36%;
+  // max-width: 270px;
+  // margin-right: 38px;
+  @include respond-to(tablet_plus) {
+    width: 100%;
+    max-width: 200px;
+    margin-right: 52px;
+  }
+  @include respond-to(mobile) {
+    margin: 0 auto 28px;
+  }
+}
+.about-movie__picture {
+  position: relative;
+  display: block;
+  height: 0;
+  width: 100%;
+  padding-bottom: 148.15%;
+  margin-bottom: 23px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.about-movie__btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 17px;
+}
+.about-movie__title {
+  margin-bottom: 13px;
+}
+.about-movie__genre {
+  margin-bottom: 18px;
+}
+.about-movie__movie-dimension {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  .movie-dimension {
+    margin-right: 30px;
+  }
+}
+.about-movie__info {
+  width: 56.13%;
+  // max-width: 527px;
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+  .rating {
+    margin-bottom: 9px;
+  }
+}
+.about-movie__info-item {
+  @include font(14px, 18px, "Geometria-Regular");
+  display: flex;
+  padding: 6.6px 0;
+}
+.about-movie__info-subtitle {
+  @include font(14px, 18px, "Geometria-Regular");
+  flex-shrink: 0;
+  width: 39.29%;
+  padding-right: 14px;
+  color: $color-text-info;
+}
+.about-movie__bottom {
+  padding: 15px 0;
+}
+.about-movie__like-title {
+  @include font(20px, 23px, "Geometria-Bold");
+}
+.about-movie__text {
+  @include font(14px, 23px, "Geometria-Regular");
+  position: relative;
+  max-height: 92px;
+  margin: 11px 0 10px;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.is-hidden-text {
+  &::before {
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+}
+.about-movie__btn-more {
+  @include font(14px, 23px, "Geometria-Bold");
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: $color-primary;
+  cursor: pointer;
+  i {
+    margin-left: 5px;
+    path {
+      stroke: $color-primary;
+    }
+  }
+}
+.about-movie__hours-sessions {
+  width: 38.76%;
+  @include respond-to(tablet_plus) {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

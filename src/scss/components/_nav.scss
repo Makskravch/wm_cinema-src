@@ -1,0 +1,54 @@
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nav__item {
+  position: relative;
+  margin-bottom: 31px;
+  @include respond-to(tablet_plus) {
+    margin-bottom: 25px;
+  }
+  &:nth-child(4) {
+    margin-bottom: 46px;
+    @include respond-to(tablet_plus) {
+      margin-bottom: 25px;
+    }
+  }
+  &:nth-child(n + 5) {
+    margin-bottom: 21px;
+    .nav__link {
+      @include font(18px, 22px, "Geometria-Regular");
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.nav__link {
+  @include font(30px, 38px, "Geometria-Bold");
+  @include respond-to(tablet_plus) {
+    @include font(25px, 32px, "Geometria-Bold");
+  }
+}
+.nav__link {
+  display: block;
+  transition: 0.2s;
+  &:hover {
+    transform: translateX(10px);
+  }
+  &.is-active {
+    color: $color-primary;
+  }
+}
+.nav__like-link {
+  display: flex;
+  align-items: center;
+  cursor: default;
+  @include respond-to(tablet_plus) {
+    justify-content: center;
+  }
+  i {
+    margin-left: 10px;
+  }
+}

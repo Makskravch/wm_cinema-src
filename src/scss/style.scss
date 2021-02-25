@@ -1,0 +1,53 @@
+// Abstract
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+// Vendors
+@import "vendors/slick/slick", "vendors/slick/slick-theme";
+@import "vendors/magnific-popup/magnific-popup";
+@import "vendors/jquery-ui/jquery-ui.scss";
+
+// Base
+@import "base/fonts";
+@import "base/reset";
+@import "base/base";
+@import "base/global";
+
+// Layout
+@import "layout/wrapper";
+@import "layout/container";
+@import "layout/grid-4";
+@import "layout/grid-5";
+
+// Components
+@import "components/btn";
+@import "components/menu-btn";
+@import "components/logo";
+@import "components/social";
+@import "components/actions";
+@import "components/popup-profile";
+@import "components/contacts";
+@import "components/movie-dimension";
+@import "components/movie-tile";
+@import "components/movie-list";
+@import "components/coming-soon";
+@import "components/promotions-news-tile";
+@import "components/slider-4";
+@import "components/slider-5";
+@import "components/breadcrumbs";
+@import "components/nav";
+@import "components/header";
+@import "components/menu";
+@import "components/footer";
+@import "components/success";
+@import "components/banner";
+@import "components/hours-sessions";
+@import "components/promotions-discounts-article-block";
+
+// Pages
+// @import "pages/home";
+@import "pages/about-movie";
+@import "pages/promotions-discounts";
+@import "pages/promotions-discounts-article";
+@import "pages/success";

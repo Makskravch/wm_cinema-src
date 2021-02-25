@@ -1,0 +1,36 @@
+.logo__link {
+  display: block;
+  text-align: center;
+  &:hover {
+    .logo__bg {
+      fill: $color-bg-secondary;
+    }
+    .logo__w,
+    .logo__m {
+      fill: $color-primary;
+    }
+  }
+}
+.logo__link {
+  svg {
+    @include respond-to(tablet_plus) {
+      height: 50px;
+      width: 50px;
+    }
+    @include respond-to(mobile) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+  path {
+    transition: 0.5s;
+  }
+}
+.logo__name {
+  @include font(24px, 28px, "Geometria-Regular");
+  padding: 7px 0;
+  text-transform: uppercase;
+}
+.logo__slogan {
+  @include font(12px, 15px, "Geometria-Regular");
+}

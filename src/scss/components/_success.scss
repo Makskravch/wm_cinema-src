@@ -1,0 +1,39 @@
+.success__inner {
+  max-width: 450px;
+  padding: 40px 0;
+  margin: 83px auto 0;
+  text-align: center;
+  @include respond-to(tablet_landscape) {
+    padding: 20px 0;
+    margin: 0 auto;
+  }
+}
+.success__icon {
+  margin-bottom: 31px;
+  @include respond-to(tablet_landscape) {
+    margin-bottom: 20px;
+  }
+}
+.success__title {
+  @include font(35px, 40px, "Geometria-Bold");
+  margin-bottom: 32px;
+  @include respond-to(tablet_landscape) {
+    @include font(30px, 35px, "Geometria-Bold");
+    margin-bottom: 20px;
+  }
+}
+.success__text {
+  @include font(14px, 23px, "Geometria-Regular");
+  margin-bottom: 13px;
+  @include respond-to(tablet_landscape) {
+    @include font(14px, 20px, "Geometria-Regular");
+  }
+}
+.success__btn {
+  min-width: 230px;
+  padding: 17px;
+  margin-top: 30px;
+  @include respond-to(tablet_landscape) {
+    margin-top: 15px;
+  }
+}

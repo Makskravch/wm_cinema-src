@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html')
+
+<body>
+  <div class="wrapper promotions-discounts-article-page">
+    <div class="container direction-column">
+      @@include('_header.html')
+      @@include('_menu.html')
+      @@include('_breadcrumbs.html', {'last-crumb': 'Назва новини може бути довгою'})
+
+      <!-- MAIN -->
+      <main class="main" id="main">
+        @@include('_promotions-discounts-article-block.html')
+        @@include('_slider-4.html', {title: 'Акції та новини'})
+      </main>
+
+      @@include('_footer.html')
+    </div>
+  </div>
+
+  @@include('_popup-profile.html')
+
+  @@include('_scripts.html')
+</body>
+
+</html>
